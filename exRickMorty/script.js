@@ -8,11 +8,7 @@ async function executar(){
     const personagem = await buscarPersonagemDaAPI(idPers)
     console.log(personagem)
 
-    /* MONTAR ABAIXO HTML COM O VALOR RETORNADO DA API */
-    // 3 - Pegar elemento de resultado do HTML
-    // 4 - Atribuir valores do personagem na tela
-    // 4.1 - Mudar o atributo src da tag img
-    // 4.2 - Mudar o atributo innerText da tag que guarda o nome do personagem
+    
     document.getElementById("persNome").innerHTML = personagem.name
     document.getElementById("status").innerHTML ="Status: " + personagem.status
     document.getElementById("species").innerHTML =  "Especie: " + personagem.species
@@ -24,16 +20,9 @@ async function executar(){
     const imgPers = document.getElementById("persImg")
     imgPers.src = personagem.image
     console.log(imgPers)
-    
 
     
 
-    /* Dica:
-        Dar console.log na variável 'personagem'
-        para visualizar o objeto;
-        Olhar a documentação de como o objeto é retornado
-        https://rickandmortyapi.com/documentation/#character-schema
-    */
 }
 
 
