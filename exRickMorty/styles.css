@@ -1,0 +1,30 @@
+body{
+    margin-top: 0%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+h1{
+    margin-top: 0%;
+    background-color: rgba(128, 128, 128, 0.623);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.containerPersonagem{
+    background-color: rgba(128, 128, 128, 0.623);
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+.containerPersonagem #persNome{
+    text-align: center;
+}
+.footer{
+    text-align: center;
+}
+.foto{
+    display: block;
+    border-radius: 5%;
+}
+.personagemDados{
+    text-align: left;
+}
