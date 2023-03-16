@@ -1,13 +1,26 @@
-async function executar(){
-    const input = document.getElementById("idPersonagem")
-    console.log("Carregando...")
-    const idp = input.value
-    const personagem = await buscarPersonagemDaAPI(idp)
-    console.log(personagem)
+window.addEventListener("load", function(){
+    console.log("A janela carregada!")
+    document.getElementById("busca").addEventListener("click", funcaoPrincipal)
+})
+function funcaoPrincipal(){
+    //entradas
+    pegarValueInput()
+    //processamento
+    chamarApi()
+    //saida
+    mostrarDados()
 }
-async function buscarPersonagemDaAPI(id){
-    const url = `https://pokeapi.co/api/v2${id}`
+function pegarValueInput(){
+    const elementoInput = document.getElementById("idPokemon")
+    const valor = elementoInput.value
+    console.log(valor)
+}
+async function chamarApi(){
+    const url = `https://pokeapi.co/api/v2/pokemon/${codigo}`
+    const resposta = await fetch (url)
+    const valor = await resposta.json()
 
-    const response = await fetch(url)
-    return response.json()
+}
+function mostrarDados(){
+
 }
